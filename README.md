@@ -1,8 +1,43 @@
-# You Get an A (C++)
+# You Get an A (C++) — CSC 122
+
+## Overview
 
 You can find the instructions for this lab at [More Than Equations][more-than-equations]. Create a new repository on GitHub to house your code. Be sure to make the repository public so that I can view and grade it.
 
 We will use [CMake][cmake] to build executables (e.g. tests, the driver program, the benchmarks, etc.). Additionally, we will use [Catch2][catch2] for unit testing and benchmarking.
+
+This project implements a simple, object-oriented gradebook system in C++ for CSC 122.  
+It allows you to manage students, assignments, and grades — and generate a clean, formatted report that displays all the information in a CSV-style table.
+**Later I will work on the add-ons for the gradebook system.**
+
+---
+
+## How to Use
+
+### Creating a Gradebook
+```cpp
+Gradebook gradebook;
+```
+
+### Adding Students
+```cpp
+gradebook.add_student("John", "Wick", 123); // Student's first name, last name, and ID number
+```
+
+### Adding Assignments
+```cpp
+gradebook.add_assignment("Exam 1", 100); // Assignment name, assignment score
+```
+
+### Entering Grades
+```cpp
+gradebook.enter_grade(123, "Exam 1", 95); // John Wick, Exam 1, 95 points earned
+```
+
+### Generating a Report
+```cpp
+cout << gradebook.report();
+```
 
 ## Building Executables With CMake
 
