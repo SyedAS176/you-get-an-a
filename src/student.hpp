@@ -2,8 +2,6 @@
 
 #include <string>
 
-#include <string>
-
 class Student {
 private:
     std::string first_name;
